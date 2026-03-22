@@ -5,13 +5,13 @@ import model_trainer
 def run_project():
     print("--- House Price Prediction Project ---")
     
-    # 1. טעינה
+    #loading
     df = data_loader.load_modern_housing_data()
     
-    # 2. ניתוח ויזואלי
+    # Visual analysis
     explorer.plot_correlation_matrix(df)
     
-    # 3. אימון המודל
+    # Training the model
     model, rmse, r2 = model_trainer.train_housing_model(df)
     
     print(f"Model Training Complete.")
